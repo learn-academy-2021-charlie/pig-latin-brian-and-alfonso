@@ -21,7 +21,7 @@ class App extends Component{
     // the variable "userInput" will contain the text input from the user modified into an array of words
     // no need to change this variable
     let userInput = this.state.phrase.split(" ")
-    console.log("userInput:", userInput)
+    console.log("this is our userInput: ", userInput)
 
     // now that we have an array of words, we can map over the array and access each word
     let translatedWordsArray = userInput.map(currentWord => {
@@ -34,6 +34,25 @@ class App extends Component{
       console.log("vowelsArray:", vowelsArray)
 
       // your code here!
+
+      //option 1: starts with vowel
+      //if (word starts with vowel) {return currentWord+"way"}
+      
+      //option 2; starts with consonant
+      //else if (word begins with consonant) {
+      //  remove all consonants before first vowel
+      //  move it to end of currentWord
+      //  add "ay"
+      // return currentWord+ay
+      // }
+      
+      //option 3: has qu
+
+
+      //queen
+      // ueenqay
+
+
 
       // Remember: console.log is your friend :)
 
@@ -51,6 +70,7 @@ class App extends Component{
     // the setState method will take your information from "translatedWords" and update the state object that is displayed to the user
     // no need to change this method
     this.setState({phraseTranslated: translatedWords})
+    // this.setState({phraseTranslated: "this is my new phrase!"})
   }
 
   restartGame = () => {
