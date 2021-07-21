@@ -37,16 +37,22 @@ class App extends Component{
 
       //option 1: starts with vowel
       //if (word starts with vowel) {return currentWord+"way"}
-      
-      //option 2; starts with consonant
+      //option 2: that has a qu
+      // if(the word has qu before the first vowel and if it starts with a consonant) {return current}
+      // find the index for the first non-u vowel
+      // replace the first letters qu that ends with the non-u vowel to the end and add "ay" to the end 
+      // {return currentWord+ "ay"}
+      //option 3; starts with consonant
       //else if (word begins with consonant) {
       //  remove all consonants before first vowel
-      //  move it to end of currentWord
-      //  add "ay"
+      //  move those consonant to end of currentWord
+      //  add "ay" to the end
       // return currentWord+ay
       // }
+
+
       
-      //option 3: has qu
+    
 
 
       //queen
