@@ -34,6 +34,26 @@ class App extends Component{
       console.log("vowelsArray:", vowelsArray)
 
       // your code here!
+      // if the word starts with the vowel
+      // if the first letter of the currentWord starts with an a 
+     if(currentWord[0] === "a" || currentWord[0] === "e" || currentWord[0] === "i" || currentWord[0] === "o" || currentWord[0] === "u") { console.log(currentWord[0]) 
+      return currentWord + "way"
+     
+    }
+    else if(vowelsArray) {
+      return vowelsArray[0]
+    }
+    
+
+
+
+
+
+
+
+
+
+
 
       //option 1: starts with vowel
       //if (word starts with vowel) {return currentWord+"way"}
