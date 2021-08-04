@@ -21,7 +21,7 @@ class App extends Component{
     // the variable "userInput" will contain the text input from the user modified into an array of words
     // no need to change this variable
     let userInput = this.state.phrase.split(" ")
-    console.log("userInput:", userInput)
+    console.log("this is our userInput: ", userInput)
 
     // now that we have an array of words, we can map over the array and access each word
     let translatedWordsArray = userInput.map(currentWord => {
@@ -34,6 +34,82 @@ class App extends Component{
       console.log("vowelsArray:", vowelsArray)
 
       // your code here!
+      // if the word starts with the vowel
+      // if the first letter of the currentWord starts with an a 
+     if(currentWord[0] === "a" || currentWord[0] === "e" || currentWord[0] === "i" || currentWord[0] === "o" || currentWord[0] === "u") { console.log(currentWord[0]) 
+      return currentWord + "way"
+     
+    }
+    //if the word is a "qu" word
+    //the first vowel is a "u" AND the letter in front of "u" is  "q"
+    // find the index of "u" in the current word
+    //then get the index before it
+    //currentWord[currentWord.indexOf("u")-1]
+
+    else if(vowelsArray[0] === "u" && currentWord[currentWord.indexOf("u")-1] === "q") {
+      // index of letter after u
+      let firstNonULetterIndex = currentWord.indexOf("u")+1
+
+      let firstHalf = currentWord.slice(0,firstNonULetterIndex)
+      let secondHalf = currentWord.slice(firstNonULetterIndex)
+
+      return secondHalf+firstHalf+"ay"
+      // use .slice()
+    }else{
+      let firstVowelIndex = currentWord.indexOf(vowelsArray[0])
+      // return firstVowelIndex
+      //first half of the word
+      let firstHalf = currentWord.slice(0,firstVowelIndex)
+      //second half of the word
+      let secondHalf = currentWord.slice(firstVowelIndex)
+      //switch the halves
+
+      //add ay
+      return secondHalf+firstHalf+"ay"
+    }
+    
+
+//currentWord
+// squeal
+// "squeal".indexOf("u")
+//  "squ" "eal"
+// "eal" "squ"
+// ealsquay
+
+
+
+
+
+
+
+
+
+      //option 1: starts with vowel
+      //if (word starts with vowel) {return currentWord+"way"}
+
+      //option 2: that has a qu
+      // if(the word has qu before the first vowel and if it starts with a consonant) {return current}
+      // find the index for the first non-u vowel
+      // replace the first letters qu that ends with the non-u vowel to the end and add "ay" to the end 
+      // {return currentWord+ "ay"}
+
+      //option 3; starts with consonant
+      //else if (word begins with consonant) {
+      //  remove all consonants before first vowel
+      //  move those consonant to end of currentWord
+      //  add "ay" to the end
+      // return currentWord+ay
+      // }
+
+
+      
+    
+
+
+      //queen
+      // ueenqay
+
+
 
       // Remember: console.log is your friend :)
 
@@ -51,6 +127,7 @@ class App extends Component{
     // the setState method will take your information from "translatedWords" and update the state object that is displayed to the user
     // no need to change this method
     this.setState({phraseTranslated: translatedWords})
+    // this.setState({phraseTranslated: "this is my new phrase!"})
   }
 
   restartGame = () => {

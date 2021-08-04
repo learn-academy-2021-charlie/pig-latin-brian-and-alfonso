@@ -5,10 +5,12 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
+  background-color: aqua;
 }
 
 button {
+  background-color:#89CFF0;
   margin: 1rem;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -19,7 +21,7 @@ footer {
 }
 
 .butcherPig {
-  width: 12rem;
+  width: 30rem;
 }
 
 .userInput {
@@ -31,8 +33,8 @@ footer {
 }
 
 .inputArea {
-  background-color: #606060;
-  color: #fff;
+  background-color:#800020;
+  color: red;
   border-radius: .5rem;
   padding: 1rem;
 }
